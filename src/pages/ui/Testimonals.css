@@ -1,0 +1,36 @@
+.testimonals-wrapper {
+  padding: 2rem;
+  background-color: #f3ece3;
+}
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 4rem;
+  padding: 1rem;
+  scroll-snap-type: x mandatory;
+  cursor:grab;
+}
+
+.scroll-container::-webkit-scrollbar {
+  height: 4px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #a86a65;
+  border-radius: 10px;
+}
+.scroll-container > * {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+@media (max-width: 768px) {
+  .testimonals-wrapper {
+    padding: 1rem;
+  }
+
+  .scroll-container {
+    gap: 2rem;
+    padding: 0.5rem;
+  }
+}

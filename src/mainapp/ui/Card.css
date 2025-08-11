@@ -1,0 +1,24 @@
+.quote-card-section {
+  margin: 1rem;
+}
+
+.quote-card {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  gap: 4rem;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.quote-card-quotes {
+    background-color:#AB8882;
+    padding: 0.5rem;
+    font-family: 'Quicksand', sans-serif;
+    text-transform: capitalize;
+    font-size: large;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.568);
+    border-radius: 20px;
+    width: 50rem;
+}

@@ -1,0 +1,108 @@
+.toggle-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  padding-top: 2.5rem;
+}
+
+.toggle-container {
+  width: 80px;
+  height: 40px;
+  background-color: #754B4D;
+  border-radius: 999px;
+  position: relative;
+  cursor: pointer;
+  box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.circle {
+  width: 32px;
+  height: 32px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: left 0.3s ease;
+}
+
+.toggle-container.on {
+  background-color: #AB8882;
+}
+
+.toggle-container.on .circle {
+  left: 44px;
+}
+
+/* when dark */
+/* background of main content */
+body.dark-theme .layout-box {
+  background-color: #463c30;
+}
+
+/* changes in header */
+body.dark-theme .mainheader-container {
+  background-color: #754B4D;
+  box-shadow: 2px 4px 5px #523436;
+}
+
+body.dark-theme .function-button {
+  box-shadow: 0 5px #9d7e78;
+}
+
+body.dark-theme .function-button:active {
+  box-shadow: 0 2px #AB8882;
+  transform: translateY(4px);
+}
+
+body.dark-theme #exit {
+  background-color: #AB8882;
+  text-decoration: none;
+}
+
+body.dark-theme #exit:hover {
+  background-color: #bc9790;
+}
+
+body.dark-theme #sound {
+  background-color: #AB8882;
+}
+
+body.dark-theme #sound:hover {
+  background-color: #bc9790;
+}
+
+/* footer changes */
+body.dark-theme .bottomnav-container {
+  background-color: #754B4D;
+}
+
+body.dark-theme .nav-button {
+  background-color: #AB8882;
+  box-shadow: 0 6px #9d7e78;
+}
+
+body.dark-theme .nav-button:hover {
+  background-color: #bc9790;
+}
+
+body.dark-theme .nav-button:active {
+  box-shadow: 0 2px #AB8882;
+}
+
+/* game header changes */
+body.dark-theme .gameheader-container {
+  background-color: #754b4d;
+  box-shadow: 2px 4px 5px #523436;
+}
+
+body.dark-theme ::-webkit-scrollbar-thumb {
+  background-color: #AB8882;
+}
+
+body.dark-theme ::-webkit-scrollbar-thumb:hover {
+  background-color: #BC9790;
+}

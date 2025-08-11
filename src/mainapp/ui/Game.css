@@ -1,0 +1,45 @@
+.game-section {
+    margin: 1rem;
+    padding: 2rem;
+}
+.game-slider-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0.3rem;
+    overflow: hidden;
+    justify-content: space-around;
+    gap: 2rem;
+    transition: transform 0.5s ease-in-out;
+}
+.game-card-container {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem;
+    scroll-behavior: smooth;
+}
+.game-nav-button>button {
+    margin: 1rem;
+    padding: 0.5rem;
+    width: 4rem;
+    background-color: #794441;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 6px #664242;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.game-nav-button>button:hover {
+    background-color: #a05a57;
+}
+
+.game-nav-button>button:active {
+    box-shadow: 0 2px #664242;
+    transform: translateY(2px);
+}

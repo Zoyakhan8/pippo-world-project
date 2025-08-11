@@ -1,0 +1,91 @@
+.room {
+    width: 762px;
+    height: 562px;
+    position: relative;
+    overflow: hidden;
+}
+
+.wall {
+    background-color: #eac8c3;
+    width: 100%;
+    height: 50%;
+    position: relative;
+    border-bottom: 10px solid #cea9a3;
+    overflow: hidden;
+}
+
+.window {
+    width: 130px;
+    height: 150px;
+    background-color: #a6c7e8;
+    outline: 12px solid white;
+    border: 2px solid rgb(213, 213, 255);
+    position: absolute;
+    top: -5%;
+    left: 10%;
+}
+
+.lamp {
+    position: absolute;
+    left: 40%;
+}
+
+.deco {
+    position: absolute;
+    left: 55%;
+}
+
+.carpet {
+    position: absolute;
+    left: 30%;
+    top: -20%;
+}
+
+.plant {
+    position: absolute;
+    top: -1%;
+    right: 74%;
+}
+
+.cupboard img {
+    position: absolute;
+    top: -70%;
+    left: 68%;
+}
+
+.sofa img {
+    position: absolute;
+    top: -45%;
+    right: 60%;
+}
+
+.lamp img {
+    width: 10rem;
+}
+
+.deco img,
+.plant img {
+    width: 12rem;
+}
+.cupboard img,
+.sofa img {
+    width: 17rem;
+}
+.carpet img{
+    width: 23rem;
+}
+.floor-container {
+    position: relative;
+    border-top: 3px solid #8b5a2b;
+    background-color: #e6ccb2;
+    width: 100%;
+    height: 50%;
+}
+.cat-container{
+    position: absolute;
+    right: 31%;
+    top: -8%;
+}
+.cat-container img{
+    width: 13rem;
+}

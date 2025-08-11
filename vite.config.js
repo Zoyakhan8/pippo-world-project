@@ -1,0 +1,16 @@
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+// https://vite.dev/config/
+export default defineConfig({
+  base:"/pippo-world-project.git",
+   server:{
+    host:"0.0.0.0",
+      port: 5173,        // or any other if you want
+    strictPort: true,
+    fs:{
+      strict:false,
+    },
+  },
+  plugins: [react()],
+})

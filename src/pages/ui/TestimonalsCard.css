@@ -1,0 +1,96 @@
+.card-section {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  padding: 2rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width:none; 
+}
+.card-container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+ width: 80vw; 
+  max-width:300px;
+  min-width: 250px;
+  height: 500px;
+  border-radius: 20px;
+  padding: 2rem;
+  line-height: 2rem;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card-container {
+  flex: 0 0 300px;
+  scroll-snap-align: start;
+}
+
+.card-profile-image img {
+  width: 100px;
+  border-radius: 50%;
+  align-self: center;
+}
+.card-profile-name {
+  font-size: x-large;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.card-testimonals {
+  font-size: large;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+.card-container:hover{
+  opacity: 0.85;
+  transform: scale(1.08);
+}
+@media (max-width: 768px) {
+  .card-container {
+    width: 90vw;
+    min-width: 260px;
+    height: auto;
+    padding: 1.5rem;
+  }
+
+  .card-profile-image img {
+    width: 80px;
+  }
+
+  .card-profile-name {
+    font-size: 1.1rem;
+  }
+  .card-container:hover {
+    opacity: 1;
+    transform: none;
+    cursor: default;
+  }
+
+  .card-testimonals {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-container {
+    width: 95vw;
+    padding: 1rem;
+  }
+
+  .card-profile-name {
+    font-size: 1rem;
+  }
+
+  .card-testimonals {
+    font-size: 0.9rem;
+  }
+}
+
