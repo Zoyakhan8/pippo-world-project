@@ -14,7 +14,7 @@ import {
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-export const HabitTracker = ({ petName,catMood,setCatMood }) => {
+export const HabitTracker = ({ petName, catMood, setCatMood }) => {
     // default habits to help new users
     const defaultHabits = [
         { id: 1, habit: "Drink 8 glasses of Water", completed: false },
@@ -129,14 +129,24 @@ export const HabitTracker = ({ petName,catMood,setCatMood }) => {
     useEffect(() => {
         let mood = "";
         if (completionPercent >= 80) {
-            mood = "happy";
+            mood = "excited";
         } else if (completionPercent >= 50) {
-            mood = "neutral";
+            mood = "happy";
         } else {
             mood = "worried";
         }
         setCatMood(mood);
     }, [completionPercent, setCatMood]);
+    // cat mood description 
+    const getCatMessage = () => {
+        const name = petName || "Cat"; 
+        const moodMessages = {
+            excited: `${name} is over the moon about your progress!`,
+            worried: `${name} is concerned for you.`,
+            happy: `${name} is purring with joy!`
+        };
+        return moodMessages[catMood];
+    }
     // labeling charts also data implementation
     const chartData = {
         datasets: [
@@ -174,11 +184,11 @@ export const HabitTracker = ({ petName,catMood,setCatMood }) => {
                             {habitData.map((habitItem) => (
                                 <div className="card" key={habitItem.id}>
                                     <div className="head">
-                                    <h2 id="head-text" onClick={() => toggleComplete(habitItem.id)}
-                                        className={habitItem.completed ? "completed" : ""}
-                                    >
-                                        {habitItem.habit}</h2>
-                                        </div>
+                                        <h2 id="head-text" onClick={() => toggleComplete(habitItem.id)}
+                                            className={habitItem.completed ? "completed" : ""}
+                                        >
+                                            {habitItem.habit}</h2>
+                                    </div>
                                     <div className="display-actions">
                                         <button className="actions" onClick={() => handleEdit(habitItem.id)}>
                                             <img src={edit} alt="Edit" className="action-img" />
@@ -201,7 +211,7 @@ export const HabitTracker = ({ petName,catMood,setCatMood }) => {
 
                     </div>
                     <div className="cat-mood-display">
-                        <p>{petName ? `${petName} is ${catMood}` : `Cat is ${catMood}`}</p>
+                        <p>{getCatMessage()}</p>
                         <p>Your current streak: {streakCount} day{streakCount !== 1 ? "s" : ""}</p>
                     </div>
                 </div>

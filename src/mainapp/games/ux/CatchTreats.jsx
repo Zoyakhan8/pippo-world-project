@@ -6,6 +6,8 @@ import treat3 from "../../../assets/mouse.png";
 import treat4 from "../../../assets/bug.png";
 import treat5 from "../../../assets/o-fish.png";
 import game2 from "../../../assets/game2.png";
+import missSound from "../../../assets/missed-treats.mp3"; 
+import catchSound from "../../../assets/catch.m4a"; 
 import { PawLives } from './PawLives';
 
 export const CatchTreats = () => {
@@ -19,7 +21,21 @@ export const CatchTreats = () => {
     const playerHeight = 150;
     const treatSize = 53;
     const treatImages = [treat1,treat2,treat3,treat4,treat5];
-
+    // functions for sound effects
+    // sound:-catch
+    const playcatch = () => {
+            const audio = new Audio(catchSound);
+            audio.currentTime = 0; // reset so it plays instantly
+             audio.volume = 0.3;
+            audio.play();
+        };
+    // sound:-missed
+     const playmissed = () => {
+            const audio = new Audio(missSound);
+            audio.currentTime = 0; // reset so it plays instantly
+             audio.volume = 0.1;
+            audio.play();
+        };
     // Spawn treats
     useEffect(() => {
         if (!isPlaying || isGameOver) return;
@@ -49,6 +65,7 @@ export const CatchTreats = () => {
                     let newY = treat.y + 7;
 
                     if (newY > 250) {
+                        playmissed();
                         missedCount++;
                         // do not add treat, it’s missed
                     } else {
@@ -84,6 +101,7 @@ export const CatchTreats = () => {
                         treat.y + treatSize > playerY;
 
                     if (collide) {
+                        playcatch();
                         setScore(s => s + 1);
                         return false; // remove caught treat
                     }

@@ -85,6 +85,7 @@
     position: absolute;
     right: 31%;
     top: -8%;
+    cursor: pointer;
 }
 .cat-container img{
     width: 13rem;

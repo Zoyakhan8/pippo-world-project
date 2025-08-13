@@ -6,17 +6,17 @@ import plant from "../../assets/plant.png";
 import cupboard from "../../assets/cupboard.png";
 import sofa from "../../assets/sofa.png";
 // cat
-import catHappy from "../../assets/happy-cat.png";
-import catNeutral from "../../assets/game2.png";
+import catExcited from "../../assets/happy-cat.png";
+import catHappy from "../../assets/game2.png";
 import catWorried from "../../assets/worried.png";
 // main
-export const HomeMain = ({catMood}) => {
-     const getCatImage = () => {
+export const HomeMain = ({ catMood }) => {
+    const getCatImage = () => {
         switch (catMood) {
+            case "excited": return catExcited;
             case "happy": return catHappy;
-            case "neutral": return catNeutral;
             case "worried": return catWorried;
-            default: return catNeutral;
+            default: return catHappy;
         }
     };
     return (
@@ -46,7 +46,7 @@ export const HomeMain = ({catMood}) => {
                             <img src={plant} alt="PLANT" />
                         </div>
                         <div className='cat-container'>
-                              <img src={getCatImage()} alt="Cat" />
+                            <img src={getCatImage()} alt="Cat"  />
                         </div>
                     </div>
                 </div>

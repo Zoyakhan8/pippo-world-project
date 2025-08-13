@@ -19,14 +19,14 @@ import { CatchTreats } from "./mainapp/games/ux/CatchTreats";
 import { GameLayout } from "./components/layouts/GameLayout";
 export const App = () => {
   const [petName, setPetName] = useState("");
-  const [catMood, setCatMood] = useState("neutral");
+  const [catMood, setCatMood] = useState("");
   const router = createBrowserRouter([
     {
       path: "/",
       element: <AppLayout />,
       errorElement: <ErrorPage />,
       children: [
-        { path: "/", element: <Home /> },
+        { index: true, element: <Home /> },
         { path: "/about", element: <About /> },
         { path: "/contact", element: <Contact />, action: contactData, },
       ],
@@ -52,7 +52,11 @@ export const App = () => {
         { path: "catch-the-treats", element: <CatchTreats />, },
       ],
     },
-  ]);
+  ],
+  {
+    basename:"/pippo-world-project"
+  }
+);
 
   return <RouterProvider router={router} />;
 };

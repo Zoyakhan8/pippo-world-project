@@ -16,7 +16,7 @@ export const Testimonals = () => {
     },
     {
       profile: test1,
-      username: "ARJUN",
+      username: "Fatwimah",
       testimonals: "It’s hard to stay consistent when your mind’s all over the place. Pippo made it feel like I was taking care of a pet — which somehow made it easier to take care of myself too."
     },
     {
@@ -26,7 +26,7 @@ export const Testimonals = () => {
     },
     {
       profile: test1,
-      username: "Kiran",
+      username: "Zumaiza",
       testimonals: "Most apps make me feel like I’m behind. Pippo makes me feel safe. Like I can grow slowly, and that’s okay. Even the cat’s mood helps me be more aware of my own"
     },
   ];
