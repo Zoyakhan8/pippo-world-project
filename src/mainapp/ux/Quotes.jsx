@@ -5,6 +5,7 @@ export const Quotes = () => {
     console.log(quotesData);
     // Loop through each item in quotesData array ,Each <li> needs a unique key — here we use the index
     return (
+        <section className="quote-section" style={{padding:"1.5rem"}}>
         <ul>
             {quotesData.map((currQuote, index) => (
                 <li key={index}>
@@ -12,5 +13,6 @@ export const Quotes = () => {
                 </li>
             ))}
         </ul>
+        </section>
     );
 }

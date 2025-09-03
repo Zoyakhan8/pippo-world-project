@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import paws from "../../../assets/x-paw.png";
 import fish from "../../../assets/o-fish.png";
 import '../ui/TicTacToe.css';
-import popSound from "../../../assets/Pop.mp3";
+import popSound from "../../../../public/Pop.mp3";
 export const TicTacToe = () => {
     const intialBoard = Array(9).fill(null);
     const [board, setBoard] = useState(intialBoard);

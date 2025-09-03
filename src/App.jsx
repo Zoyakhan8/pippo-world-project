@@ -24,7 +24,7 @@ export const App = () => {
     {
       path: "/",
       element: <AppLayout />,
-      errorElement: <ErrorPage />,
+      errorElement: <Loading />,
       children: [
         { index: true, element: <Home /> },
         { path: "/about", element: <About /> },
@@ -34,7 +34,7 @@ export const App = () => {
     {
       path: "/pippo",
       element: <MainLayout />,
-      errorElement: <ErrorPage />,
+      errorElement: <Loading/>,
       children: [
         { path: "home", element: <HomeMain petName={petName} catMood={catMood} />, },
         { path: "habit-tracker", element: <HabitTracker petName={petName} catMood={catMood} setCatMood={setCatMood} />, },

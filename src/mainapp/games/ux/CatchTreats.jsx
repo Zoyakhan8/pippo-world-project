@@ -6,8 +6,8 @@ import treat3 from "../../../assets/mouse.png";
 import treat4 from "../../../assets/bug.png";
 import treat5 from "../../../assets/o-fish.png";
 import game2 from "../../../assets/game2.png";
-import missSound from "../../../assets/missed-treats.mp3"; 
-import catchSound from "../../../assets/catch.m4a"; 
+import missSound from "../../../../public/missed-treats.mp3"; 
+import catchSound from "../../../../public/catch.m4a"; 
 import { PawLives } from './PawLives';
 
 export const CatchTreats = () => {

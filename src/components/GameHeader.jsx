@@ -2,7 +2,7 @@ import { Toggle } from '../mainapp/ux/Toggle';
 import sound from "../assets/volume.png";
 import off from "../assets/volume-slash.png";
 import exit from "../assets/exit.png";
-import BgSound from "../assets/bg-sound.mp3";
+import BgSound from "../../public/bg-sound.mp3"
 import '../components/GameHeader.css'
 import { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom'
